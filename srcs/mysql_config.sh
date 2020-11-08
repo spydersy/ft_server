@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    mysql_config.sh                                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abelarif <abelarif@student.1337.ma>        +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/11/07 15:22:31 by abelarif          #+#    #+#              #
+#    Updated: 2020/11/07 15:22:32 by abelarif         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 # Download mysql configuration package using wget from official repository :
 wget	https://dev.mysql.com/get/mysql-apt-config_0.8.15-1_all.deb
 
@@ -34,3 +46,6 @@ mysql -u root -e "GRANT ALL PRIVILEGES ON wp_DB.* TO 'abelarif'@'localhost';"
 # Reloads the grant tables in the mysql database enabling the changes to take effect \
 # without reloading or restarting mysql service
 mysql -u root -e "FLUSH PRIVILEGES;"
+
+#start nginx service
+# service nginx start
