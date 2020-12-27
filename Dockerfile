@@ -12,12 +12,15 @@
 
 FROM		debian:buster
 EXPOSE		80 443
-RUN			apt-get update						-y
-RUN			apt-get upgrade						-y
-RUN			apt-get install nginx wget unzip	-y
+RUN			apt-get update && apt-get upgrade                   -y
+RUN         apt-get install vim nginx php-fpm php-mysql wget    -y
 
 COPY		srcs/ /srcs
+RUN         ./srcs/all.sh
 
-RUN			sh /srcs/php_config.sh
-RUN			sh /srcs/mysql_config.sh
-RUN			sh /srcs/wp_config.sh
+CMD         ./srcs/services_start.sh && bash
+# CMD         service php7.3-fpm  restart
+# CMD         service nginx       restart
+
+# RUN			sh /srcs/mysql_config.sh
+# RUN			sh /srcs/wp_config.sh

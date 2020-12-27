@@ -10,12 +10,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-apt install -y php php-common
-apt -y install php-cli php-fpm php-json php-pdo php-mysql php-zip php-gd  php-mbstring php-curl php-xml php-pear php-bcmath
-# vi /etc/nginx/sites-available/default #conf nginx (add php)
-mv /srcs/default /etc/nginx/sites-available/default
-mv /srcs/index.php /var/www/html/.
-service nginx start
-rm -rf /var/www/html/index.html 
-service php7.3-fpm start 
-#mv index.php to ...
+apt install php php-fpm php-mysql -y
+service php7.3-fpm start
+mv ./srcs/index.php /var/www/html/.
