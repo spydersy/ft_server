@@ -1,3 +1,4 @@
+apt-get update && apt-get upgrade                   -y
 # installation & configuration nginx    : 
 sh ./srcs/nginx_config.sh
 
@@ -6,5 +7,6 @@ sh ./srcs/php_config.sh
 
 # installation & comfiguration mysql    :
 sh ./srcs/mysql_config.sh
-
-# sh ./srcs/services_start.sh
+sh ./srcs/phpMyAdmin_config.sh
+sh ./srcs/wp_config.sh
+sh ./srcs/services_start.sh
