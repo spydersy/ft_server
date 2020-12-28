@@ -42,6 +42,7 @@ mysql -u root -e "CREATE DATABASE wp_DB;"
 
 # Grant all access to the user :
 mysql -u root -e "GRANT ALL PRIVILEGES ON wp_DB.* TO 'abelarif'@'localhost';"
+mysql -u root -e "GRANT ALL PRIVILEGES ON * TO 'abelarif'@'localhost';"
 
 # Reloads the grant tables in the mysql database enabling the changes to take effect \
 # without reloading or restarting mysql service

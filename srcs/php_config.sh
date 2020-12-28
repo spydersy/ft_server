@@ -12,4 +12,3 @@
 
 apt install php php-fpm php-mysql wget -y
 service php7.3-fpm start
-mv ./srcs/index.php /var/www/html/.
