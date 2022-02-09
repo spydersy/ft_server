@@ -15,6 +15,5 @@ EXPOSE		80 443
 
 COPY		srcs/ /srcs
 RUN         ./srcs/all.sh
-CMD 		/usr/sbin/nginx -g "daemon off;"
-CMD         ./srcs/services_start.sh && bash
-
+# CMD 		/usr/sbin/nginx -g "daemon off;"
+ENTRYPOINT  bash /srcs/services_start.sh && tail -f /dev/null
